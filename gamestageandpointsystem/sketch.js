@@ -10,83 +10,83 @@ let points = 0;
 
 function setup() {
   cnv = createCanvas(600, 600);
-  
+
   textFont('fantasy');
 }
 
 function draw() {
-  
-  switch (state){
-      
+
+  switch (state) {
+
     case 'title':
-    title();
-    cnv.mouseClicked(titleMouseClicked); 
-    break;
-    
+      title();
+      cnv.mouseClicked(titleMouseClicked);
+      break;
+
     case 'level 1':
-    level1();
-    cnv.mouseClicked(level1MouseClicked); 
-    break;
+      level1();
+      cnv.mouseClicked(level1MouseClicked);
+      break;
     case 'you win':
       youWin();
       cnv.mouseClicked(youWinMouseClicked);
       break;
-      
+
       text('score =' + score, 100, 200)
-    
-    
+
+
     default:
-      break; 
+      break;
   }
-  
+
 }
 
-function title(){
-    background(200, 171, 235);
+function title() {
+  background(200, 171, 235);
   textSize(80);
   stroke(255);
-  text('Too Quiet', 150,100);
-  
+  text('Too Quiet', 150, 100);
+
   textSize(30);
-  text('click to start', 220,500);
+  text('click to start', 220, 500);
 }
 
-function titleMouseClicked(){
+function titleMouseClicked() {
   console.log('canvas is clicked on title page');
-  state ='level 1'
+  state = 'level 1'
 }
 
 
 
-function level1(){
+function level1() {
   background(89, 36, 181);
-  text('click for points', 0, height - 30);
+  text('Score: ' + points, width * 0.05, height * 0.95);
 }
 
-function level1MouseClicked(){
-  
-  
+function level1MouseClicked() {
+
+
   points += 1;
-console.log('points = ' + points);
-  
-  if (points >= 5) {
-    state = 'you win';  
+  console.log('points = ' + points);
+
+  if (points >= 11) {
+    state = 'you win';
   }
-  
+
 }
 
-function youWin(){
+function youWin() {
   background(200, 171, 235);
   textSize(80);
   stroke(255);
   text('YOU WIN', 150, 100);
-  
+
   textSize(30);
-  text('click to restart', 200,500);
-  
+  text('click to restart', 200, 500);
+
 }
 
-function youWinMouseClicked(){
+function youWinMouseClicked() {
   state = 'level 1'
   points = 0;
 }
