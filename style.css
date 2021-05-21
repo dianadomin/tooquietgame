@@ -1,6 +1,6 @@
 html,
 body {
-  background-image:url(webbg);
+  background-image: url("https://dianadomin.github.io/tooquietgame/TQFinal/TQWebbg.jpg");
   margin: 0;
   padding: 0;
 }
@@ -8,4 +8,28 @@ body {
 canvas {
   display: block;
   margin: 50px auto 50px auto;
+}
+
+
+h1 {
+  color: #d1d1d1;
+    font-family: Papyrus;
+    font-size: 35pt;
+    text-align: center;
+    text-shadow: 3px 3px ##736c94;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:5px;
+    padding-top: 100px;
+}
+
+h2 {
+  color: #d1d1d1;
+  font-family: Papyrus;
+  font-size: 20pt;
+  text-align: center;
+  text-shadow: 3px 3px ##736c94;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top:10px;
 }
