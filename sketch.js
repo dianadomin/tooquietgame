@@ -27,8 +27,8 @@ function preload() {
   level1Img= loadImage("TQFinal/TQLevel1.png");
   bonusImg= loadImage("TQFinal/TQBonus.png");
   winImg= loadImage("TQFinal/TQWinscreen.png");
-  
-  
+
+
 }
 
 function setup() {
@@ -54,12 +54,12 @@ function draw() {
       level1();
       cnv.mouseClicked(level1MouseClicked);
       break;
-      
+
     case "level Bonus":
       levelBonus();
       cnv.mouseClicked(levelBonusMouseClicked);
       break;
-      
+
     case "you win":
       youWin();
       cnv.mouseClicked(youWinMouseClicked);
@@ -75,7 +75,7 @@ function keyPressed() {
     player.direction = "left";
   } else if (keyCode == RIGHT_ARROW) {
     player.direction = "right";
-  } 
+  }
 }
 
 function keyReleased() {
@@ -107,7 +107,7 @@ function level1(){
   imageMode(CENTER);
   image(negcloudImg,x, y, radius*3, radius*3);
   textSize(24);
-  
+
 }
 
 function levelBonus() {
